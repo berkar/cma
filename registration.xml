@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<competition>
+    <common>
+        <club>BDIF</club>                               <!-- Arrangerande klubb -->
+        <name>Pagla Mountain Race</name>                <!-- Namn på tävlingen -->
+        <place>Pagla skidstadion, Boden</place>         <!-- Platsen för vart tävlingen ska gå -->
+        <date>2003-01-26</date>                         <!-- Tävlingsdatum enligt YYYY-MM-DD -->
+        <time>11:00:00</time>                           <!-- Start tävlingsklocka i HH:mm:ss -->
+        <startinterval>60</startinterval>               <!-- Start intervall mellan ekipage i samma klass (sek.) -->
+        <classinterval>60</classinterval>               <!-- Tids intervall mellan klasser (sek.) -->
+        <firstnumber>100</firstnumber>                  <!-- Första nummerlappen -->
+    </common>
+    <classes>
+        <class name="D21A (PWU)" distance="10.0"> <!-- Unikt (!) namn på klass samt distans i kilometer -->
+            <registration>
+                <did>0046.11902</did>
+                <club>Skellefteå BHK</club>
+                <name>Fia Svensson</name>
+                <address />
+                <post-address />
+                <phone />
+                <mail />
+                <dogs>Vovven, S123456/99</dogs>
+            </registration>
+            <registration>
+                <did>0046.11903</did>
+                <club>Holmsunds HK</club>
+                <name>Silvia Karlsson</name>
+                <address />
+                <post-address />
+                <phone />
+                <mail />
+                <dogs>Fido, S123456/01</dogs>
+            </registration>
+        </class>
+        <class name="H21A (PMU)" distance="15.0"> <!-- Unikt (!) namn på klass samt distans i kilometer -->
+            <registration>
+                <did>0046.21903</did>
+                <club>Luleå BHK</club>
+                <name>Jonas Svensson</name>
+                <address />
+                <post-address />
+                <phone />
+                <mail />
+                <dogs>Maia, S22222/99</dogs>
+            </registration>
+            <registration>
+                <did>0046.21904</did>
+                <club>BDIF</club>
+                <name>Bertil Karlsson</name>
+                <address />
+                <post-address />
+                <phone />
+                <mail />
+                <dogs>Maia, S11111/99</dogs>
+            </registration>
+        </class>
+    </classes>
+</competition>
+

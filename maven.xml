@@ -1,0 +1,82 @@
+<project default="debug" xmlns:m="maven" xmlns:j="jelly:core" xmlns:u="jelly:util" xmlns:deploy="deploy">
+	<!-- ================================================================== -->
+	<!-- INIT (Not used at the moment)                                      -->
+	<!-- ================================================================== -->
+	<goal name="init">
+		<property environment="bashenv"/>
+		<fail unless="client.target" message="Missing property: client.target"/>
+		<echo>Using target file: ${client.target}</echo>
+		<filter filtersfile="${client.target}"/>
+	</goal>
+	<!-- ================================================================== -->
+	<!-- DEBUG                                                              -->
+	<!-- ================================================================== -->
+	<goal name="debug" description="Print the Maven Property definitions, by category">
+		<echo/>
+		<echo>=== maven:</echo>
+		<echoproperties prefix="maven"/>
+		<echo>=== java:</echo>
+		<echoproperties prefix="java."/>
+		<echo>=== os:</echo>
+		<echoproperties prefix="os."/>
+		<echo>=== user:</echo>
+		<echoproperties prefix="user."/>
+		<echo>maven.repo.local=${maven.repo.local}</echo>
+	</goal>
+	<!-- ================================================================== -->
+	<!-- DEPLOY                                                             -->
+	<!-- ================================================================== -->
+	<goal name="deploy" description="Package all needed resources into an application" prereqs="jar:jar">
+        <filter token="version" value="${pom.currentVersion}"/>
+		<!-- Create dir to use for packaging -->
+		<mkdir dir="${maven.build.dir}/${maven.final.name}"/>
+		<!-- Copy application jar file -->
+		<copy file="${maven.build.dir}/${maven.final.name}.jar" todir="${maven.build.dir}/${maven.final.name}"/>
+		<!-- Copy application bat file -->
+		<copy file="${maven.src.dir}/conf/cma.bat" todir="${maven.build.dir}/${maven.final.name}" filtering="true"/>
+        <copy file="${maven.src.dir}/conf/cma.sh" todir="${maven.build.dir}/${maven.final.name}" filtering="true"/>
+		<!-- Take care of external Jar dependencies -->
+		<mkdir dir="${maven.build.dir}/${maven.final.name}/lib"/>
+		<deploy:copy-deps todir="${maven.build.dir}/${maven.final.name}/lib"/>
+        <!-- Copy documentation to distribution -->
+        <copy file="${basedir}/docs/install.txt" todir="${maven.build.dir}/${maven.final.name}"/>
+        <copy file="${basedir}//docs/users-guide.pdf" todir="${maven.build.dir}/${maven.final.name}"/>
+		<!-- Zip application -->
+		<zip destfile="${maven.build.dir}/${maven.final.name}.zip" basedir="${maven.build.dir}/${maven.final.name}"/>
+	</goal>
+    <!-- ================================================================== -->
+    <!-- DEPLOY SNAPSHOT                                                            -->
+    <!-- ================================================================== -->
+    <goal name="deploy-snapshot" description="Package all needed resources into an application" prereqs="jar:jar">
+        <j:set var="snapshotVersion" value="SNAPSHOT"/>
+        <j:if test="${date != null}">
+            <j:set var="snapshotVersion" value="SNAPSHOT-${date}"/>
+        </j:if>
+
+        <filter token="version" value="${snapshotVersion}"/>
+        <!-- Create dir to use for packaging -->
+        <mkdir dir="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}"/>
+        <!-- Copy application jar file and change name to snapshot version -->
+        <copy file="${maven.build.dir}/${maven.final.name}.jar" tofile="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}/${pom.artifactId}-${snapshotVersion}.jar"/>
+        <!-- Copy application bat file -->
+        <copy file="${maven.src.dir}/conf/cma.bat" todir="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}" filtering="true"/>
+        <copy file="${maven.src.dir}/conf/cma.sh" todir="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}" filtering="true"/>
+        <!-- Take care of external Jar dependencies -->
+        <mkdir dir="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}/lib"/>
+        <deploy:copy-deps todir="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}/lib"/>
+        <!-- Copy documentation to distribution -->
+        <copy file="${basedir}/docs/install.txt" todir="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}"/>
+        <copy file="${basedir}//docs/users-guide.pdf" todir="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}"/>
+        <!-- Zip application -->
+        <zip destfile="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}.zip" basedir="${maven.build.dir}/${pom.artifactId}-${snapshotVersion}"/>
+    </goal>
+	<!-- ================================================================== -->
+	<!-- ARCHIVE                                                            -->
+	<!-- ================================================================== -->
+	<goal name="archive" prereqs="deploy,site:generate">
+	</goal>
+
+    <postGoal name="xdoc:register-reports">
+        <attainGoal name="maven-linkcheck-plugin:deregister"/>
+    </postGoal>
+</project>

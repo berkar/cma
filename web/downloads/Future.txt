@@ -1,0 +1,28 @@
+Följande är ett tänkt framtidsscenario med CMA och draghundsport.se som aktörer:
+
+1. Klubbansvarig publicerar en tävling/aktivitet på draghundsport.se (Finns)
+2. Anmälan till publicerad tävling/aktivitet görs på draghundsport.se av 
+   åkare (Nytt)
+3. Via draghundsport.se så kan anmälningslistan presenteras (Nytt)
+4. Inför tävlingen/aktiviteten så laddar klubbansvarig ner en fil från
+   draghundsport.se med info om tävlingen/aktiviteten + alla anmälda 
+   åkare (Nytt)
+5. Import av nedladdad fil till CMA (Nytt)
+6. Anmälninglistan kan även presenteras i CMA (Finns)
+7. Lottning & tilldelning av startnummer i CMA (Finns)
+8. Startlista presenteras i CMA (Finns)
+9. Tävlingen genomförs ... (OBS! Tidsmätning sker via annan lösning)
+10. Import av resultatfil till CMA samt beräkning av resultat (Finns)
+11. Resultatlista Presenteras i CMA (Finns)
+12. Prisutdelning ...
+13. Uppladdning av resultatfil från CMA till draghundsport.se för publicering
+    av resultat. (Nytt)
+
+Även ex. slutrapporter o.dyl kan hanteras denna väg, dvs på samma vis som 
+punkt 13, men jag har inte gjort dem rapporterna än :-)
+
+Jag kan även tänka mig att man definierar tävlingen via CMA och sen laddar 
+upp den till draghundsport.se för publicering, men det känns mer som grädde
+på moset :-)
+
+Vi får väl se om jag kan få SDSF & Kjelle's välsignelse på detta först ...

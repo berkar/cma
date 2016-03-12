@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<cma>
+    <title>CMA-Jaktstart</title>
+    <icon>icon2.gif</icon>
+    <menubar>
+        <menu name="Fil">
+            <action>FILE</action>
+            <menuitem name="Ny ...">
+                <action>NEW</action>
+                <class>cma.command.NewCmd</class>
+            </menuitem>
+            <menuitem name="Öppna ...">
+                <action>OPEN</action>
+                <class>cma.command.OpenCmd</class>
+            </menuitem>
+            <menuitem name="Stäng">
+                <action>CLOSE</action>
+                <class>cma.command.CloseCmd</class>
+            </menuitem>
+            <separator/>
+            <menuitem name="Spara">
+                <action>SAVE</action>
+                <class>cma.command.SaveCmd</class>
+            </menuitem>
+            <menuitem name="Spara som ...">
+                <action>SAVE_AS</action>
+                <class>cma.command.SaveAsCmd</class>
+            </menuitem>
+            <separator/>
+            <menuitem name="Egenskaper ...">
+                <action>APPLICATION_PROPERTIES</action>
+                <class>cma.command.ApplicationPropertiesCmd</class>
+            </menuitem>
+            <separator/>
+            <menuitem name="Avsluta">
+                <action>EXIT</action>
+                <class>cma.command.ExitCmd</class>
+            </menuitem>
+        </menu>
+        <menu name="Tävling">
+            <action>COMPETITION</action>
+            <menuitem name="Egenskaper ...">
+                <action>COMPETITION_PROPERTIES</action>
+                <class>cma.command.CompetitionPropertiesCmd</class>
+            </menuitem>
+            <separator/>
+            <menuitem name="Klasser ...">
+                <action>CLASSES</action>
+                <class>cma.command.ClassesCmd</class>
+            </menuitem>
+            <menuitem name="Anmälningar ...">
+                <action>REGISTRATIONS</action>
+                <class>cma.command.RegistrationsCmd</class>
+            </menuitem>
+        </menu>
+        <menu name="Verktyg">
+            <action>TOOLS</action>
+            <menuitem name="Exportera startlista ...">
+                <action>EXPORT_STARTLIST</action>
+                <class>cma.command.ExportStartListCmd</class>
+            </menuitem>
+            <separator/>
+            <menuitem name="Importera tider ...">
+                <action>IMPORT_TIME</action>
+                <class>cma.command.ImportTimeCmd</class>
+            </menuitem>
+            <menuitem name="Beräkna resultat">
+                <action>RESULTS</action>
+                <class>cma.command.ResultCmd</class>
+            </menuitem>
+            <separator/>
+            <menuitem name="Rapporter ...">
+                <action>REPORTS</action>
+                <class>cma.command.ReportsCmd</class>
+            </menuitem>
+        </menu>
+        <menu name="Hjälp">
+            <action>HELP</action>
+            <menuitem name="Om ...">
+                <action>ABOUT</action>
+                <class>cma.command.AboutCmd</class>
+            </menuitem>
+        </menu>
+    </menubar>
+</cma>

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- Content Stylesheet for Site -->
+<!-- start the processing -->
+<!-- ====================================================================== -->
+<!-- Main Page Section -->
+<!-- ====================================================================== -->
+<HTML>
+<HEAD>
+<TITLE>CMA - Competition Management Application - Formatbeskrivningar</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META name=author value="Bertil Karlsson">
+<META name=email value="bertil.AT.fam-karlsson.DOT.com">
+</HEAD>
+<BODY text="#000000" link="#525d76" bgColor="#ffffff">
+<TABLE cellSpacing=0 width="100%" border=0>
+  <!-- TOP IMAGE -->
+  <TBODY>
+    <TR>
+      <TD colSpan=2>
+		<div align="center"> <A href="http://cma.fam-karlsson.com"><font size="6"><strong>CMA</strong></font></A> 
+        </div>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE cellSpacing=4 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD colSpan=2>
+      <HR noShade SIZE=1>
+    </TD></TR>
+
+  <TR>
+    <!-- LEFT SIDE NAVIGATION -->
+    <TD vAlign=top noWrap width="20%">
+      <!-- ============================================================ -->
+      <P><STRONG>Om CMA</STRONG></P>
+      <UL>
+        <LI><A href="index.html">Välkommen</A> </LI>
+        <LI><A href="news.html">Nyheter &amp; Status</A> </LI>
+      </UL>
+      <P><STRONG>Downloads</STRONG></P>
+      <UL>
+        <LI><A href="downloads">Arkiv</A> </LI>
+        <LI><A href="reports">Rapporter</A> </LI>
+        <LI><A href="http://java.sun.com/j2se/1.4.2/download.html">Java J2SE v 1.4.2_03 (JRE)</A> </LI>
+      </UL>
+      <P><STRONG>Dokumentation</STRONG></P>
+      <UL>
+        <LI><A href="downloads/ReadMe1st.txt">Installation</A> </LI>
+        <LI><A href="downloads/users-guide.pdf">Senaste Användarmanualen</A> </LI>
+        <LI><A href="format.html">Formatbeskrivningar</A> </LI>
+      </UL>
+    </TD>
+    <!-- RIGHT SIDE -->
+    <TD vAlign=top align=left width="80%">
+      <TABLE cellSpacing=0 cellPadding=2 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor="#525d76">
+            <FONT face="arial,helvetica,sanserif" color="#ffffff">
+              <A name="News &amp; Status"><STRONG>Formatbeskrivningar</STRONG></A>
+            </FONT>
+          </TD>
+        </TR>
+        <TR>
+          <TD>
+            <BLOCKQUOTE>
+              <A name="format.competition"><H3>Format XML fil för tävling</H3></A>
+                  <P> Tävlingsfilen, som har postfix '.dog', har ett format enligt 
+                    detta <a href="competition.png">schema</a> (<a href="competition.xsd">xsd</a>). 
+                    OBS! Dock så hanteras filen inte exakt som specificationen 
+                    föreskriver. Inbördes ordning på elementen kan variera! </P>
+              <HR noShade SIZE=1>
+              <A name="import.format.competition"><H3>Importformat XML fil för tävling</H3>
+                  </A> 
+                  <P>Importfilen, som b&ouml;r ha postfix '.xml', m&aring;ste 
+                    ha ett format enligt detta <a href="import.png">schema</a> 
+                    (<a href="import.xsd">xsd</a>).</P>
+                  <HR noShade SIZE=1>
+              <A name="import.format.registrations"><H3>Importformat CSV fil för anmälningar</H3>
+                  </A> 
+                  <p>Se anv&auml;ndarmanualen!</p>
+              <HR noShade SIZE=1>
+              <A name="import.format.result"><H3>Importformat CSV fil för resultat tider</H3></A>
+              <P>
+                Filen med resultat måste vara i textformat, och bör ha postfix '.txt', och innehållet
+                måste vara en rad per resultattid och enligt (tid anges med HH:MM:SS): Startnr,tid<BR/>
+                Exempel på importfil:<BR/>
+                <strong>
+                102,12:00:00<BR/>
+                103,12:01:05<BR/>
+                101,11:05:00<BR/>
+                osv.<BR/>
+                </strong>
+                Filen behöver inte vara komplett! Man kan upprepa antalet importer så många gånger som man
+                behöver. Dock så måste ny beräkning av resultatet utföras varje gång, om korrekt resultat
+                ska visas.
+              </P>
+              <HR noShade SIZE=1>
+              <A name="export.format.startlist"><H3>Exportformat CSV fil för startlista</H3></A>
+              <P>
+                Filen är i textformat, och har postfix '.txt', och innehållet är enligt:<BR/>
+                Första raden innehåller kolumn namnen. Resterande rader, en per anmäld åkare,
+                har kolumn data. Exempel på export fil (tid anges med HH:MM:SS):<BR/>
+                <strong>
+                Klass,Förening,Startnr,Namn,Starttid<BR/>
+                H21A,BDIF,100,Bertil Karlsson,11:00:00<BR/>
+                D21A,BDIF,101,Fia Svensson,11:01:00<BR/>
+                osv.<BR/>
+                </strong>
+              </P>
+              <HR noShade SIZE=1>
+
+          </BLOCKQUOTE>
+          <P></P></TD></TR>
+        <TR>
+          <TD><BR></TD></TR></TBODY></TABLE></TD></TR>
+  <!-- FOOTER -->
+  <TR><TD colSpan=2><HR noShade SIZE=1></TD></TR>
+  <TR>
+    <TD colSpan=2>
+      <DIV align=center>
+        <FONT color="#525d76" size="-1">
+          <EM>Copyright © 2004, Bertil Karlsson </EM>
+        </FONT>
+      </DIV>
+    </TD>
+  </TR>
+</TBODY></TABLE><!-- end the processing --></BODY></HTML>

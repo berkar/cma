@@ -1,0 +1,48 @@
+CMA
+-----------------
+
+Välkommen till CMA (Competition Management Application)! Användarmanual
+hittar du under docs katalogen på den plats som du package upp denna applikation på.
+
+System krav:
+------------
+
+För att kunna köra detta program krävs att JAVA finns installerat på
+maskinen. Minst 1.4.2 måste dessutom användas. För installation av JAVA
+se http://java.sun.com för mer information.
+
+Om inte miljö variabeln JAVA_HOME är satt efter installtion av JAVA så måste
+den sättas manuellt till rooten av JAVA installationen.
+
+Packa upp applikationen:
+------------------------
+
+Använd ex. Winzip alt. inbyggt program i Windows XP för att packa upp arkivet.
+För mer information om winzip se: http://www.winzip.com
+
+Applikationen kan placeras på valfritt ställe.
+
+Distributionen innehåller följande struktur/innehåll:
+
+  xxx
+   |
+   +--- lib  // Innehåller nödvändiga jar arkiv
+   |
+   +--- docs // Innehåller dokumentationen, ex. manual (ett måste läsa ;-)
+   |
+   +--- cma.bat // Startup script för windows
+   |
+   +--- cma.sh // Startup script för unix/linux
+   |
+   +--- cma-XXX.jar // Applikations jar där XXX är versions nummret
+
+Använd applikationen:
+---------------------
+
+Applikationen startas via start script cma.bat på windows alt. cma.sh
+på unix/linux.
+
+
+Lycka till!
+
+/Bertil Karlsson

@@ -1,0 +1,82 @@
+
+R-2-1-rc1:
+- Lägg till import av anmälningar (CSV)
+- Skriv om rapport delen så att den hanteras via plug-in förfarande.
+- Uppdatera dokumentationen
+
+R-2-0:
+- Nytt CVS repository! Det innebär att jag tappar historia för tidigare releaser.
+- Kopiera (om det går) data från start & resultat fliken i registrerings dialogen till ekipage fliken
+  map. info som används mer frekvent
+- Hantera byte av klass. Implementerat via Ctrl-X, Ctrl-V (windows copy/paste). Klart redan i 1.3 relelasen!
+- Arbeta bort behovet av att gå via en fil för transformationer. Då kan man arbeta på DOM trädet direkt
+- Lagt till 'Exportera startlista' i meny för 'Verktyg'
+- Byt namn till CMA (Competition Management Application)
+- Uppdatera dokumentationen
+
+R-1-3:
+- Lägg till dokumentation till distributionen
+- Uppdatera dokumentationen
+
+R-1-2:
+- Tagit bort referenser till class/metod för att lotta & beräkna starttider på en gång
+- Fixat till så att klass dialogen ser ut som tidigare (nästan)
+- Lägg till About dialog med bl.a. information om versions nummer
+
+R-1-1:
+- Refactor Cmd's till att ha pre, execute på samma sätt som Struts action klasser
+- Lägg till fråga om att beräkna resultat när import av tider har körts
+- Implementera knappar för Dela ut startnummer & Beräkna starttider!?
+- Flytta Beräkna resultat från meny till dialog för klasser?
+  Men då kanske namnet på fliken bör bytas ut från lottning till admin (eller nåt sånt)
+  Alt. så kanske 2 flikar läggs till, start & resultat??
+- Flytta Spara startlista & resultatlista till dialog för klasser, ev. under resp. flik (nytt!),
+  samt basera funktionaliteten per valda klasser.
+- Text på knappar i flik Lottning, Dialog för klasser:
+  - Lotta startordning
+  - Dela ut startnummer
+  - Beräkna starttider
+  - Spara startlista
+
+  Beakta följande alternativa scenarion:
+  - Efteranmälningar
+  - Strykningar
+  - Anmälan på plats
+  - Felaktig inmatning/anmälan map klass
+
+R-1-0:
+- Added more todo issues
+
+R-1-0-rc3:
+- Skriv en Installationsbeskrivning (txt)
+- Skriv en Användarmanual (pdf)
+
+R-1-0-rc2:
+- Öppna senaste tävling automatiskt => Hanteras via ApplicationPropertyManager
+- Slå ihop listor och rapporter => Bytt plats på innehållet i listor
+- Print preview av rapporter => Visar upp resultatet efter att ha sparat filen.
+- Lägg till 'Egenskaper' under Fil med följande properties:
+  * Browser path
+- Lägg till XSL:FO/PDF som komponenter i projektet
+- Spara senaste tävling vid öppnande av tävling, inte vid sparande ...
+- Ta bort senaste tävling vid stängning av tävling!
+- För att öppna Egenskaper så får det inte krävas att det finns en tävling öppen!
+- Dialogen för Importera tider är inte snygg ...
+- Vad används antal mellantider till i Klass dialogen? => Tagit bort fältet!
+- Flytta Spara anmälningslista till Dialog för anmälningar
+- Ny tävling sparas inte med .dog om det utelämnas! bugg ...
+- När dialogen för klasser öppnas så visas inte anmälningarna för den klassen
+- Anmälan till första klassen för dagen verkar inte sparas!? bugg ... => Gick inte att upprepa!
+- Second release candidate for console application.
+
+R-1-0-rc1:
+- First release candidate for console application
+
+
+
+
+
+
+
+
+

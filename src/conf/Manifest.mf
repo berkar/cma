@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Created-By: BeKa
+Class-Path: lib/xerces.jar lib/xalan.jar lib/jaxp.jar lib/jdom.jar lib/jaxen-jdom.jar lib/jaxen-core.jar lib/saxpath.jar lib/castor-0.9.4.1-xml.jar lib/OculusLayout.jar
+Main-Class: cma.ApplicationController

@@ -1,0 +1,28 @@
+
+*********************************************************************************
+Planerat till release 3.0
+- Hantera jaktstart
+- Hantera stafett
+- Dynamiskt antal mellantider
+- Lägg till file history/recent files
+- Språköversättningar
+- Definiera upp vilka fält som ska kunna finnas för respektive dialog, dvs. utöver
+  krävande fält. Gäller kanske mest dialogerna för anmälan & tävlings egenskaper
+
+*********************************************************************************
+Nice-to-have:
+- Lägg till snabbval ex. ctrl-s för spara
+- Ok knappar som default val vid 'Enter'!
+- Lägg till en bakgrundsbild till applikationen
+- Lägg till användande av log4j (Klart i project.xml!)
+
+*********************************************************************************
+Utredning:
+- Ta reda på hur man hanterar if satser i 'sh'. Det behövs i cma.sh ...
+- Hantering av HTML/PDF
+- Hantering av tävlingstyper: Vanlig, Jaktstart, Sprint & Stafett
+- Hantering av Dynamiska/deklarativa regelverk, ex.
+  * Svenska cup
+  * Europa cup
+  * World cup
+  * Lagpris

@@ -1,0 +1,15 @@
+/* 
+  ====================================================================
+  Copyright Bertil Karlsson 2003
+  Kråkbergsvägen 44
+  S-954 42 S:a Sunderbyn
+  SWEDEN
+  bertil@fam-karlsson.com
+
+  The copyright to the computer program(s) herein is the property
+  of Bertil Karlsson, Sweden. The program(s) may be used and/or
+  copied only with the written permission of Bertil Karlsson or 
+  in accordance with terms and conditions stipulated in the
+  agreement/contract under which the program(s) have been supplied.
+  ====================================================================
+*/
